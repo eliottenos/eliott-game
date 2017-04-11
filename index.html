@@ -11,36 +11,73 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+
+      <body class="container-fluid">
+
+  <h1>Tic Tac Toe</h1>
+
+    <div class="row">
+      <div class="col-md-4 box">.col-md-4</div>
+      <div class="col-md-4 box">.col-md-4</div>
+      <div class="col-md-4 box">.col-md-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 box">.col-md-4</div>
+      <div class="col-md-4 box">.col-md-4</div>
+      <div class="col-md-4 box">.col-md-4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 box">.col-md-4</div>
+      <div class="col-md-4 box">.col-md-4</div>
+      <div class="col-md-4 box">.col-md-4</div>
+    </div>
+
 
       <form id="sign-up">
-        <fieldset>
-          <legend>Sign up!</legend>
-          <input type="text" name="credentials[email]" placeholder="email">
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="password" name="credentials[password_confirmation]" placeholder="password confirmation">
-          <input type="submit" name="submit" value="Sign up!">
-        </fieldset>
-      </form>
+  <div class="form-inline">
+    <legend>Sign up!</legend>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+  </div>
+  <div class="form-inline">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+  </div>
+  <div class="form-inline">
+    <label for="exampleInputPassword1">Confirm Password</label>
+    <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
 
       <form id="sign-in">
-        <fieldset>
-          <legend>Sign in!</legend>
-          <input type="text" name="credentials[email]" placeholder="email">
-          <input type="password" name="credentials[password]" placeholder="password">
-          <input type="submit" name="submit" value="Sign in!">
-        </fieldset>
-      </form>
+  <div class="form-inline">
+    <legend>Sign in!</legend>
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+  </div>
+  <div class="form-inline">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+  <label for="passwords[new]">New Password</label>
+</form>
 
       <form id="change-password">
-        <fieldset>
-          <legend>Change Password!</legend>
-          <input type="password" name="passwords[old]" placeholder="old password">
-          <input type="password" name="passwords[new]" placeholder="new password">
-          <input type="submit" name="submit" value="Change Password!">
-        </fieldset>
-      </form>
+  <div class="form-inline">
+    <legend>Change Password!</legend>
+    <label for="passwords[old]">Old Password</label>
+    <input type="password" class="form-control" name="passwords[old]" placeholder="old password">
+  </div>
+  <div class="form-inline">
+    <label for="passwords[new]">New Password</label>
+    <input type="password" class="form-control" name="passwords[new]" placeholder="new password">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
 
       <form id="sign-out">
         <fieldset>
