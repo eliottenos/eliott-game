@@ -16,36 +16,39 @@
 
   <h1>Tic Tac Toe</h1>
 
-    <div class="row">
-      <div class="col-md-4 box">.col-md-4</div>
-      <div class="col-md-4 box">.col-md-4</div>
-      <div class="col-md-4 box">.col-md-4</div>
+  <div class="board">
+
+    <div class="row1">
+      <div class="box">.col-md-41</div>
+      <div class="box">.col-md-42</div>
+      <div class="box">.col-md-43</div>
     </div>
 
-    <div class="row">
-      <div class="col-md-4 box">.col-md-4</div>
-      <div class="col-md-4 box">.col-md-4</div>
-      <div class="col-md-4 box">.col-md-4</div>
+    <div class="row2">
+      <div class="box">.col-md-44</div>
+      <div class="box">.col-md-45</div>
+      <div class="box">.col-md-46</div>
     </div>
 
-    <div class="row">
-      <div class="col-md-4 box">.col-md-4</div>
-      <div class="col-md-4 box">.col-md-4</div>
-      <div class="col-md-4 box">.col-md-4</div>
+    <div class="row3">
+      <div class="box">.col-md-47</div>
+      <div class="box">.col-md-48</div>
+      <div class="box">.col-md-49</div>
     </div>
+  </div>
 
 
       <form id="sign-up">
-  <div class="form-inline">
+  <div class="form-horizontal">
     <legend>Sign up!</legend>
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
   </div>
-  <div class="form-inline">
+  <div class="form-horizontal">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
   </div>
-  <div class="form-inline">
+  <div class="form-horizontal">
     <label for="exampleInputPassword1">Confirm Password</label>
     <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
   </div>
@@ -53,26 +56,25 @@
 </form>
 
       <form id="sign-in">
-  <div class="form-inline">
+  <div class="form-horizontal">
     <legend>Sign in!</legend>
     <label for="exampleInputEmail1">Email address</label>
     <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
   </div>
-  <div class="form-inline">
+  <div class="form-horizontal">
     <label for="exampleInputPassword1">Password</label>
     <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
-  <label for="passwords[new]">New Password</label>
 </form>
 
       <form id="change-password">
-  <div class="form-inline">
+  <div class="form-horizontal">
     <legend>Change Password!</legend>
     <label for="passwords[old]">Old Password</label>
     <input type="password" class="form-control" name="passwords[old]" placeholder="old password">
   </div>
-  <div class="form-inline">
+  <div class="form-horizontal">
     <label for="passwords[new]">New Password</label>
     <input type="password" class="form-control" name="passwords[new]" placeholder="new password">
   </div>
@@ -80,9 +82,7 @@
 </form>
 
       <form id="sign-out">
-        <fieldset>
-          <input type="submit" name="submit" value="Sign Out!">
-        </fieldset>
+        <button type="submit" class="btn btn-default">Sign Out</button>
       </form>
 
     </body>
