@@ -6,13 +6,15 @@ body {
 }
 
 h1 {
-  font-family: 'Lucida Console', sans-serif;
+  font-family: "Lucida Console", sans-serif;
+  font-size: 40px;
 }
 
 .box {
   height: 150px;
   width: 150px;
   float: left;
+  font-size: 100px;
 }
 
 .board {
