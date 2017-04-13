@@ -51,12 +51,10 @@ const addClickEvents = function () {
 }
 
 const startGame = function () {
-  console.log('hi')
   resetGame()
 }
 
 const newGame = function () {
-  console.log('hey')
   $('.start-new-game').on('click', startGame)
 }
 

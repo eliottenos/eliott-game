@@ -6,7 +6,6 @@ const gameLogic = require('./game-logic')
 
 $(() => {
   setAPIOrigin(location, config)
-  // gameLogic.clickEvent()
   gameLogic.newGame()
   gameLogic.startGame()
 })
