@@ -6,7 +6,9 @@ const gameLogic = require('./game-logic')
 
 $(() => {
   setAPIOrigin(location, config)
-  gameLogic.clickEvent()
+  // gameLogic.clickEvent()
+  gameLogic.newGame()
+  gameLogic.startGame()
 })
 
 // use require with a reference to bundle the file and use it in this file

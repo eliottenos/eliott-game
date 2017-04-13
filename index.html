@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Eliott's Tic Tac Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags unless you know what you are doing -->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Eliott's Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags unless you know what you are doing -->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
+  <!-- Do not add `link` tags unless you know what you are doing -->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <body class="container-fluid">
+  <!-- Do not add `script` tags unless you know what you are doing -->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body class="container-fluid">
 
   <h1>Tic Tac Toe</h1>
+
+    <button type="button" class="btn btn-default start-new-game">Start New Game</button>
 
   <div class="gameBoard">
 
@@ -38,81 +41,80 @@
   </div>
 
 
-      <form id="sign-up">
-  <div class="form-horizontal">
-    <legend>Sign up!</legend>
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
-  </div>
-  <div class="form-horizontal">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-  </div>
-  <div class="form-horizontal">
-    <label for="exampleInputPassword1">Confirm Password</label>
-    <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+  <form id="sign-up">
+    <div class="form-horizontal">
+      <legend>Sign up!</legend>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+    </div>
+    <div class="form-horizontal">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+    </div>
+    <div class="form-horizontal">
+      <label for="exampleInputPassword1">Confirm Password</label>
+      <input type="password" class="form-control" name="credentials[password_confirmation]" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 
-      <form id="sign-in">
-  <div class="form-horizontal">
-    <legend>Sign in!</legend>
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
-  </div>
-  <div class="form-horizontal">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+  <form id="sign-in">
+    <div class="form-horizontal">
+      <legend>Sign in!</legend>
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" name="credentials[email]" placeholder="Email">
+    </div>
+    <div class="form-horizontal">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" name="credentials[password]" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 
-      <form id="change-password">
-  <div class="form-horizontal">
-    <legend>Change Password!</legend>
-    <label for="passwords[old]">Old Password</label>
-    <input type="password" class="form-control" name="passwords[old]" placeholder="old password">
-  </div>
-  <div class="form-horizontal">
-    <label for="passwords[new]">New Password</label>
-    <input type="password" class="form-control" name="passwords[new]" placeholder="new password">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-</form>
+  <form id="change-password">
+    <div class="form-horizontal">
+      <legend>Change Password!</legend>
+      <label for="passwords[old]">Old Password</label>
+      <input type="password" class="form-control" name="passwords[old]" placeholder="old password">
+    </div>
+    <div class="form-horizontal">
+      <label for="passwords[new]">New Password</label>
+      <input type="password" class="form-control" name="passwords[new]" placeholder="new password">
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+  </form>
 
-      <form id="sign-out">
-        <button type="submit" class="btn btn-default">Sign Out</button>
-      </form>
+  <form id="sign-out">
+    <button type="submit" class="btn btn-default">Sign Out</button>
+  </form>
 
-<div class="modal fade" id="winModelX" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">X Wins!</h4>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+  <div class="modal fade" id="winModalX" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">X Wins!</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<div class="modal fade" id="winModelO" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">O Wins!</h4>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+  <div class="modal fade" id="winModalO" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">O Wins!</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
+</body>
 
-    </body>
 </html>
