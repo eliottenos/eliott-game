@@ -1,9 +1,10 @@
 'use strict'
 
-const setAPIOrigin = require('../../lib/set-api-origin')
+const setAPIOrigin =
+require('../../lib/set-api-origin')
 const config = require('./config')
 const gameLogic = require('./game-logic')
-
+// const events = require('./events')
 $(() => {
   setAPIOrigin(location, config)
   gameLogic.newGame()
