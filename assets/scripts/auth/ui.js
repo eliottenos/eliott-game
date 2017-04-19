@@ -4,32 +4,39 @@ const store = require('../store.js')
 
 const signUpSuccess = (data) => {
   console.log(data)
+  $('.auth').text('You successully signed up!')
 }
 
 const signUpFailure = (error) => {
   console.error(error)
+  $('.auth').text('Email already taken or password does not match')
 }
 
 const signInSuccess = (data) => {
   console.log(data)
+  $('.auth').text('You successully signed in!')
   // store user
   store.user = data.user
 }
 
 const signInFailure = (error) => {
   console.error(error)
+  $('.auth').text('Your email or password is incorrect')
 }
 
 const changePasswordSuccess = (data) => {
   console.log(data)
+  $('.auth').text('You changed your password!')
 }
 
 const changePasswordFailure = (error) => {
   console.log(error)
+  $('.auth').text('Your password is incorrect')
 }
 
 const signOutSuccess = (data) => {
   console.log('success sign out')
+  $('.auth').text('You signed out!')
   store.user = null
 }
 
