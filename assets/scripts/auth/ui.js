@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store.js')
+const gameLogic = require('../game-logic.js')
 
 const signUpSuccess = (data) => {
   console.log(data)
@@ -16,6 +17,8 @@ const signInSuccess = (data) => {
   console.log(data)
   $('.auth').text('You successully signed in!')
   $('.gameBoard').show()
+  gameLogic.newGame()
+  gameLogic.startGame()
   // change display property with jq
   // store user
   store.user = data.user
