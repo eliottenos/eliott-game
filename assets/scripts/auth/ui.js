@@ -15,6 +15,8 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log(data)
   $('.auth').text('You successully signed in!')
+  $('.gameBoard').show()
+  // change display property with jq
   // store user
   store.user = data.user
 }
@@ -38,6 +40,7 @@ const signOutSuccess = (data) => {
   console.log('success sign out')
   $('.auth').text('You signed out!')
   store.user = null
+  $('.gameBoard').hide()
 }
 
 const signOutFailure = (error) => {
