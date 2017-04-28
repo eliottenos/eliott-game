@@ -1,5 +1,7 @@
 'use strict'
 
+const updateGame = require('./auth/api.js').updateGame
+
 let gameBoard = ['', '', '', '', '', '', '', '', '']
 
 let turn = 'X'
@@ -12,6 +14,8 @@ const resetGame = function () {
 
 const addClickEvents = function () {
   $('.box').on('click', function () {
+    const clickId = this.dataset.id
+    const update = {cell: {index: clickId, value: turn}}
     if (turn === 'X') {
       $(this).html('X')
       $(this).off()
@@ -46,7 +50,7 @@ const addClickEvents = function () {
       } else {
         turn = 'X'
       }
-    }
+    } updateGame({game: update})
   })
 }
 

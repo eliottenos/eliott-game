@@ -37,6 +37,15 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onUpdateGame = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log(data)
+  api.updateGame(data) // here you pass in a data object to updateGame()
+    .then(ui.updateGameSuccess)
+    .catch(ui.updateGameFailure)
+}
+
 const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#sign-up').on('submit', onSignUp)
@@ -45,5 +54,6 @@ const addHandlers = () => {
 }
 
 module.exports = {
-  addHandlers
+  addHandlers,
+  onUpdateGame
 }

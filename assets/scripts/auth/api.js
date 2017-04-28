@@ -44,45 +44,46 @@ const changePassword = (data) => {
   })
 }
 
-// const getGame = (data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/change-password/' + store.user.id,
-//     method: 'GET',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
-//
-// const newGame = (data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/change-password/' + store.user.id,
-//     method: 'POST',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
-//
-// const gameMove = (data) => {
-//   return $.ajax({
-//     url: config.apiOrigin + '/change-password/' + store.user.id,
-//     method: 'PATCH',
-//     headers: {
-//       Authorization: 'Token token=' + store.user.token
-//     },
-//     data
-//   })
-// }
+const getGame = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const newGame = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
+const updateGame = (data) => {
+  // console.log(id) what is it?
+  return $.ajax({
+    url: config.apiOrigin + '/games/' + store.game.id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: data
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
-  // getGame,
-  // newGame,
-  // gameMove
+  signOut,
+  getGame,
+  newGame,
+  updateGame
 }
