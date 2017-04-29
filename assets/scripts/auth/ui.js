@@ -16,9 +16,7 @@ const signUpFailure = (error) => {
 const signInSuccess = (data) => {
   console.log(data)
   $('.auth').text('You successully signed in!')
-  $('.gameBoard').show()
   gameLogic.newGame()
-  gameLogic.startGame()
   // change display property with jq
   // store user
   store.user = data.user
@@ -50,6 +48,10 @@ const signOutFailure = (error) => {
   console.log('error on sign out in ', error)
 }
 
+const onGameCreateSuccess = (data) => {
+  console.log('successful new game ', data)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -58,5 +60,6 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  onGameCreateSuccess
 }

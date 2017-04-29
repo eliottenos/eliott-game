@@ -21,6 +21,11 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
+const createGame = function (event) {
+  event.preventDefault()
+  api.createGame()
+}
+
 const onChangePassword = function (event) {
   event.preventDefault()
   console.log('inside of onChangePassword')
@@ -55,5 +60,6 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
-  onUpdateGame
+  onUpdateGame,
+  createGame
 }

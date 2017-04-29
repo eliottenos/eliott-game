@@ -1,7 +1,6 @@
 'use strict'
 
-const setAPIOrigin =
-require('../../lib/set-api-origin')
+const setAPIOrigin = require('../../lib/set-api-origin')
 const config = require('./config')
 const gameLogic = require('./game-logic')
 const authLogic = require('./auth/events.js')
@@ -9,6 +8,7 @@ const authLogic = require('./auth/events.js')
 $(() => {
   setAPIOrigin(location, config)
   authLogic.addHandlers()
+  gameLogic.addHandlers()
 })
 
 // use require with a reference to bundle the file and use it in this file
