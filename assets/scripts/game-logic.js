@@ -10,7 +10,7 @@ let gameBoard = ['', '', '', '', '', '', '', '', '']
 let turn = 'X'
 
 const resetGame = function () {
-  console.log("im in reset game")
+  console.log('im in reset game')
   gameBoard = ['', '', '', '', '', '', '', '', '']
   $('.box').html('')
   addClickEvents()
@@ -20,7 +20,7 @@ const addClickEvents = function () {
   // updateGame()
   // update game needs to be called every time this function is invoked
   // pass object as argument
-  console.log("im in click events game")
+  console.log('im in click events game')
   // const clickId = this.dataset.id
   // const update = {
   //   cell: {
@@ -45,7 +45,6 @@ const addClickEvents = function () {
       api.updateGame()
     } else {
       turn = 'O'
-
     }
   } else {
     $(this).html('O')
@@ -69,21 +68,20 @@ const addClickEvents = function () {
 }
 
 const startGame = function () {
-  console.log("im in start game")
+  console.log('im in start game')
   api.createGame()
-  .then((gameData)=>{
-    console.log("game was created, this is the id", gameData.game.id)
+  .then((gameData) => {
+    console.log('game was created, this is the id', gameData.game.id)
     store.game = gameData.game
     $('.gameBoard').show()
     resetGame()
     addHandlers()
   })
   .catch()
-
 }
 
 const newGame = function () {
-  console.log("im in new game")
+  console.log('im in new game')
   $('#start-new-game').on('click', startGame)
 }
 
