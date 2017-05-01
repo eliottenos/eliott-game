@@ -19,7 +19,7 @@ const signInSuccess = (data) => {
   console.log(data)
   $('.auth').text('You successully signed in!')
   $('.gameBoard').show()
-  console.log(gameLogic) // log it to see if it has a method .newGame()
+  console.log('this is ', gameLogic) // log it to see if it has a method .newGame()
   // gameLogic.newGame()
   gameLogic.startGame()
   // change display property with jq
