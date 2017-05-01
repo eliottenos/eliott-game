@@ -1,5 +1,6 @@
 [![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
+<<<<<<< HEAD
 
 Game deployed to URL: https://eliottenos.github.io/eliott-game/
 
@@ -17,3 +18,8 @@ Unsolved Problems:  I would have liked to make my page a bit more user friendly 
 
 User Stories: http://imgur.com/QTCbgjY
 Wireframes: http://imgur.com/JUnW1Lk
+=======
+Eliott's Lovely Tic Tac Toe Game
+
+https://eliottenos.github.io/eliott-game/
+>>>>>>> 9dafbebc2769ef9a8494caeff8e4c0996a159c14
