@@ -1,8 +1,9 @@
 'use strict'
 
-// const updateGame = require('./auth/api.js').updateGame
+const updateGame = require('./auth/api.js').updateGame
 const api = require('./auth/api.js')
 const store = require('./store.js')
+const getGamesSuccess = require('./auth/ui.js')
 // const ui = require('./auth/ui.js')
 
 let gameBoard = ['', '', '', '', '', '', '', '', '']
@@ -17,17 +18,18 @@ const resetGame = function () {
 }
 
 const addClickEvents = function () {
-  // updateGame()
+  api.updateGame()
   // update game needs to be called every time this function is invoked
   // pass object as argument
   console.log('im in click events game')
-  // const clickId = this.dataset.id
-  // const update = {
-  //   cell: {
-  //     index: clickId,
-  //     value: turn
-  //   }
-  // }
+  const clickId = this.dataset.id
+  const updateGame = {
+    cell: {
+      index: clickId,
+      value: turn
+    },
+    over: false
+  }
   if (turn === 'X') {
     $(this).html('X')
     $(this).off()
@@ -43,6 +45,7 @@ const addClickEvents = function () {
       // game won
       $('#winModalX').modal('show')
       api.updateGame()
+      $('.gameBoard').hide()
     } else {
       turn = 'O'
     }
@@ -61,6 +64,7 @@ const addClickEvents = function () {
       // game won
       $('#winModalO').modal('show')
       api.updateGame()
+      $('.gameBoard').hide()
     } else {
       turn = 'X'
     }
@@ -89,8 +93,16 @@ const addHandlers = () => {
   $('.box').on('click', addClickEvents)
 }
 
+const gamesCompletedButton = function () {
+  console.log('im in games completed')
+  $('#games-completed').on('click', getGamesSuccess)
+}
+
 module.exports = {
   startGame,
   newGame,
-  addHandlers
+  addHandlers,
+  gamesCompletedButton,
+  getGamesSuccess,
+  updateGame
 }
